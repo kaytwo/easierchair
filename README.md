@@ -21,6 +21,10 @@ meaning all keywords were undesirable. It will then print paper details to
 stdout in descending desirability order. Protip: page through this with `less`
 in one window and make your bids in another window.
 
+If you want to further prune your interests, you can safely run
+`rank_papers.py` again after changing `interests.txt` and it will update
+correctly. If you want to start over, delete `interests.txt`.
+
 Other generated files:
 
 `papers.ngrams.json` normalizes keywords to lowercase, adds bigrams of all
