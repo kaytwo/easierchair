@@ -29,7 +29,6 @@ class EasyChairReviews(scrapy.Spider):
   start_urls = ['https://www.easychair.org/account/signin.cgi']
 
   def parse(self,response):
-    print response
     return [FormRequest.from_response(response,
       formdata={'name':username,'password':password},
         callback=self.after_login)]

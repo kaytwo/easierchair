@@ -4,10 +4,8 @@ import json
 import os
 import string
 import sys
-import urllib2
 from collections import defaultdict
 from operator import itemgetter
-from pprint import pprint
 
 # filtering adds ngrams for long keywords and lower()s everything
 unfilteredfile = 'papers.json'
@@ -18,6 +16,7 @@ papers = []
 
 '''
 # you can experiment with keyword extraction, it was worthless for me
+import urllib2
 def grab(fn,url):
   if not os.path.exists(fn):
     with open(fn,'w') as f:
